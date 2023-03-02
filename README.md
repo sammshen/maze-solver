@@ -1,14 +1,21 @@
 # maze-solver
 
-Terminal-Based Maze Solver
+Terminal-Based Maybe Maze Solver
 
 -------------------------------------------------------------------
 Usage:
 
-Create file w/ maze such as:
+A maze is represented as an input file, comprising a rectangular grid of the following characters:
 
-SXXX 
- X   
-   X 
- XXXF
+S: Entrance (only one)
+F: Exit (only one)
+X: Wall
+Space: Open
 
+To solve the maze:
+cabal run maze-solver -- [maze input file]
+
+---------------------------------------------------------------------
+Future To-Dos:
+
+Add Animation Feature
