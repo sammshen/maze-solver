@@ -50,9 +50,7 @@ main = do
   [mazeFile] <- getArgs
   (maze, numRows, numCols, startPos) <- loadMaze mazeFile
   let mp = floodfill maze numRows numCols startPos (Just [])
-  case mp of 
-    Nothing     -> error "unsolveable maze"
-    _           -> print mp 
+  print mp
 
 floodfill :: Maze -> Int -> Int -> Pos -> Maybe Path -> Maybe Path
 floodfill maze numRows numCols currPos@(i, j) (Just path)
